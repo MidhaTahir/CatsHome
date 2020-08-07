@@ -10,10 +10,11 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
+    margin-bottom: 8px;
 }
 
 .card-container:hover{
-    transform : scale(1.05);
+    transform : scale(1.02);
 }
 
 h3,h6{
