@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body{
+  background-color: #b18ad4c9;
+  background-image: url(http://static.frontendmasters.com/resources/2019-05-02-complete-intro-react-v5/image-background.png);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.head{
+  color: #A63700;
+  font-size : 40px;
+}
+
