@@ -10,6 +10,7 @@ class App extends Component {
       cats: [],
       searchField : '',
     };
+    //Binding this
     // this.handleChange = this.handleChange.bind(this);
   }
 
