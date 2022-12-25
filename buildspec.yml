@@ -9,7 +9,6 @@ phases:
   pre_build:
     commands:
       - npm install # (3)
-      - npm test # (4)
   build:
     commands:
       - docker build -t mids29/catshome . # (5)
