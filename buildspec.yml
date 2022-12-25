@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16 # (1)
+    commands:
+      - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin  # (2)
+  pre_build:
+    commands:
+      - npm install # (3)
+      - npm test # (4)
+  build:
+    commands:
+      - docker build -t mids29/catshome . # (5)
+  post_build:
+    commands:
+      - docker push mids29/catshome
