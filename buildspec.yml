@@ -15,3 +15,9 @@ phases:
   post_build:
     commands:
       - docker push mids29/catshome
+artifacts:
+  files:
+    - '**/*'
+  base-directory: catshome
+  name: codepipeline-us-east-1-330790849211
+  discard-paths: no
