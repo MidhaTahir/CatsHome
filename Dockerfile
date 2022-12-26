@@ -9,8 +9,6 @@ COPY package.json .
 COPY package.json package-lock.json ./
 RUN npm install
 
-ENV PATH="./node_modules/.bin:$PATH"
-
 # generating build
 COPY . .
 RUN npm run build
