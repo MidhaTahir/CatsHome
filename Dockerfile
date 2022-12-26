@@ -4,6 +4,7 @@ FROM node:14-alpine as build-stage
 WORKDIR /app
 
 # installing deps
+RUN rm -rf node_modules
 COPY package.json .
 COPY package.json package-lock.json ./
 RUN npm install
