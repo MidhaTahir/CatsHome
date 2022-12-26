@@ -12,7 +12,7 @@ ENV PATH="./node_modules/.bin:$PATH"
 
 # generating build
 COPY . .
-RUN yarn build
+RUN npm run build
 
 # production server setup
 FROM nginx:1.17.1-alpine
