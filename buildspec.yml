@@ -1,17 +1,22 @@
-version: 0.2
+version: 0.1
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 14 # (1)
     commands:
-      - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin  # (2)
+      - echo installing nodejs...
+      - curl -sL https://deb.nodesource.com/setup_12.x | bash -
+      - apt-get install -y nodejs  #aws code build use ubuntu environement
   pre_build:
     commands:
-      - npm install # (3)
+      - echo installing dependencies...
+      - npm install
   build:
     commands:
-      - docker build -t mids29/catshome . # (5)
-  post_build:
-    commands:
-      - docker push mids29/catshome
+      # - echo testing...
+      # - echo building...
+      - npm run build
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: build
