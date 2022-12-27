@@ -17,7 +17,6 @@ phases:
       - docker push mids29/catshome
 artifacts:
   files:
-    - '**/*'
-  base-directory: .
-  name: codepipeline-us-east-1-666285144739
-  discard-paths: no
+    - public/**/*
+    - src/**/*
+    - package.json
