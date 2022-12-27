@@ -17,6 +17,5 @@ phases:
       - docker push mids29/catshome
 artifacts:
   files:
-    - public/**/*
-    - src/**/*
-    - package.json
+    - "**/*"
+  base-directory: "build"
