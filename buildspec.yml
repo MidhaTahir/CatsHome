@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 10 # (1)
+      nodejs: 14 # (1)
     commands:
       - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin  # (2)
   pre_build:
@@ -15,7 +15,3 @@ phases:
   post_build:
     commands:
       - docker push mids29/catshome
-artifacts:
-  files:
-    - "**/*"
-  base-directory: "build"
